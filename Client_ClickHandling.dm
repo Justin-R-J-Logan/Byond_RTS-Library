@@ -1,6 +1,3 @@
-
-
-
 client/MouseDrop(src_object,over_object,src_location,over_location,src_control,over_control,params)
 	//Make objects to store the turfs in.
 	var/atom/f = src_object

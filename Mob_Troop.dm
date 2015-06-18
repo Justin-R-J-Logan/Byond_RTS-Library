@@ -1,6 +1,5 @@
-
 mob/Troop
-	icon = 'Mobs16x.dmi'
+	icon = 'Mobs32x.dmi'
 	icon_state = "Troop"
 	Is_Troop = 1
 	var
@@ -17,7 +16,7 @@ mob/Troop
 		Damage    = 4  //4 damage per swing
 		Hitpoints = 25 //Life Total
 		Atk_Speed = 4 //swings every 4 world ticks
-		Mov_Speed = 0 //Moves every 6 ticks, and checks for
+		Mov_Speed = 1 //Moves every 3 ticks, and checks for
 	New()
 		..()
 		Check_Actions()
@@ -82,7 +81,7 @@ mob/Troop
 			while(Checking)
 				if(Action == 0) break
 				else if(Action == 1)
-					walk_to(src, Target)
+					walk_to(src, Target, 0, Mov_Speed, 32)
 					break
 				else
 					sleep(5)
@@ -98,6 +97,6 @@ mob/Troop
 
 
 obj/Selected
-	icon = 'Mobs16x.dmi'
+	icon = 'Mobs32x.dmi'
 	icon_state = "Selected_1x1"
 	layer = MOB_LAYER+1
